@@ -7,6 +7,11 @@
 #This script is for Buster ONLY
 #Stretch users should use https://github.com/km4ack/pi-scripts/blob/master/autohotspotN-setup
 #km4ack 20190923
+
+#unblock wifi
+#needed after buster 20200205
+rfkill unblock all > /dev/null 2>&1
+
 #wb0sio 20200108 Added wifiIP to allow setting the hotspot IP address
 
 #update packages
@@ -42,7 +47,7 @@ fi
 echo;echo
 echo "You entered $wifipasswd"
 read -p "Is this correct? y/n " wifians
-if [ $wifians == "y" ]
+if [ $wifians == "y" ] || [ $wifians == "Y" ]
 then
 echo
 else
@@ -154,7 +159,7 @@ echo "wifi $shackwifi"
 echo "passwd $shackpass"
 echo "Is this correct? y/n"
 read shackans
-if [ $shackans == "y" ]
+if [ $shackans == "y" ] || [ $shackans == "Y" ]
 then
 echo
 else
