@@ -95,6 +95,8 @@ fi
 wifiIP
 ## End wb0sio addition
 
+cd $
+
 cd $HOME/temp
 
 wget http://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/hostapd.txt
