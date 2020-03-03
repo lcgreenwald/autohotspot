@@ -9,7 +9,7 @@
 #km4ack 20190923
 
 #unblock wifi
-#needed after buster 20200205
+#needed after buster 20200205  km4ack
 rfkill unblock all > /dev/null 2>&1
 
 #wb0sio 20200108 Added wifiIP to allow setting the hotspot IP address
